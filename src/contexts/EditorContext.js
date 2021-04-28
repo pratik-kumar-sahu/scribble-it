@@ -13,12 +13,12 @@ function EditorContextProvider(props) {
     update();
   };
 
-  const update = debounce(() => {
-    console.log("updating DB");
-  }, 1500);
+  const update = debounce(() => {}, 1500);
 
   return (
-    <EditorContext.Provider value={{ text, title, id, updateBody }}>
+    <EditorContext.Provider
+      value={{ text, setText, title, setTitle, id, setId, updateBody }}
+    >
       {props.children}
     </EditorContext.Provider>
   );
