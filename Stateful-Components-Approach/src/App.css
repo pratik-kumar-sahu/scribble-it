@@ -58,3 +58,12 @@ body {
   top: 50px;
   left: calc(50% - 165px);
 }
+
+::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ff0000;
+}
