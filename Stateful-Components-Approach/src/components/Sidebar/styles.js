@@ -36,6 +36,9 @@ const styles = (theme) => ({
     overflow: "scroll",
     overflowX: "hidden",
     border: "5px solid white",
+    "@media only screen and (max-width: 425px)": {
+      width: "200px",
+    },
   },
   newNoteInput: {
     width: "100%",

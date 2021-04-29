@@ -37,6 +37,12 @@ body {
   overflow: hidden;
 }
 
+@media only screen and (max-width: 425px) {
+  .quill {
+    width: calc(100% - 200px);
+  }
+}
+
 .ql-container {
   box-sizing: border-box;
   height: calc(100% - 42px);
