@@ -17,8 +17,9 @@ const styles = (theme) => ({
     backgroundColor: "#29487d",
     color: "white",
     paddingLeft: "20px",
-    "@media only screen and (max-width: 425px)": {
-      display: "none",
+    "@media only screen and (max-width: 600px)": {
+      // display: "none",
+      width: "100%",
     },
   },
   editIcon: {

@@ -22,6 +22,7 @@ body {
   margin: 2.5% auto;
   box-sizing: border-box;
   box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.2), -6px -6px 20px rgba(0, 0, 0, 0.2);
+  overflow: scroll;
 }
 
 .app-container {
@@ -37,9 +38,15 @@ body {
   overflow: hidden;
 }
 
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 600px) {
   .quill {
-    width: calc(100% - 200px);
+    /* width: calc(100% - 200px); */
+    width: 100%;
+    height: 100%;
+  }
+
+  #scribble-container {
+    margin: 5% auto;
   }
 }
 
@@ -47,7 +54,7 @@ body {
   box-sizing: border-box;
   height: calc(100% - 42px);
   overflow-y: scroll;
-  overflow: hidden;
+  overflow: scroll;
 }
 
 .ql-editor {
@@ -71,5 +78,5 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #ff0000;
+  background: #fff;
 }

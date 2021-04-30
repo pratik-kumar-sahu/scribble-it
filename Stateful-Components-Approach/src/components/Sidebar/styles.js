@@ -34,10 +34,11 @@ const styles = (theme) => ({
     boxSizing: "border-box",
     float: "left",
     overflow: "scroll",
-    overflowX: "hidden",
+    // overflowX: "hidden",
     border: "5px solid white",
-    "@media only screen and (max-width: 425px)": {
-      width: "200px",
+    "@media only screen and (max-width: 600px)": {
+      width: "100%",
+      height: "80%",
     },
   },
   newNoteInput: {

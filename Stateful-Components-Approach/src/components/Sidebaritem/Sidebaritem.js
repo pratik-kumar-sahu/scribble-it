@@ -26,10 +26,12 @@ class SidebarItem extends Component {
               secondary={removeHTMLTags(note.body.substring(0, 30)) + "..."}
             ></ListItemText>
           </div>
-          <DeleteIcon
-            onClick={() => this.deleteNote(note)}
-            className={classes.deleteIcon}
-          ></DeleteIcon>
+          {selectedNoteIndex === index ? (
+            <DeleteIcon
+              onClick={() => this.deleteNote(note)}
+              className={classes.deleteIcon}
+            ></DeleteIcon>
+          ) : null}
         </ListItem>
       </div>
     );
@@ -38,7 +40,7 @@ class SidebarItem extends Component {
   selectNote = (n, i) => this.props.selectNote(n, i);
 
   deleteNote = (note) => {
-    if (window.confirm(`Are you sure you want to delete: ${note.title}`)) {
+    if (window.confirm(`Are you sure to delete 😱 ${note.title}?`)) {
       this.props.deleteNote(note);
     }
   };
