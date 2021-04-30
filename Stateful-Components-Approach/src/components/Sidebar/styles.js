@@ -38,7 +38,7 @@ const styles = (theme) => ({
     border: "5px solid white",
     "@media only screen and (max-width: 600px)": {
       width: "100%",
-      height: "80%",
+      height: "90%",
     },
   },
   newNoteInput: {

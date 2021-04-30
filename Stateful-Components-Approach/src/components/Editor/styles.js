@@ -20,6 +20,8 @@ const styles = (theme) => ({
     "@media only screen and (max-width: 600px)": {
       // display: "none",
       width: "100%",
+      height: "40px",
+      fontSize: "1.4rem",
     },
   },
   editIcon: {
