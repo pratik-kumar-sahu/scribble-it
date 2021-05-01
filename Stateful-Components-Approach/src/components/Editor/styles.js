@@ -14,14 +14,15 @@ const styles = (theme) => ({
     padding: "5px",
     fontSize: "24px",
     width: "calc(100% - 300px)",
-    backgroundColor: "#29487d",
+    backgroundColor: "#374151",
     color: "white",
     paddingLeft: "20px",
     "@media only screen and (max-width: 600px)": {
       // display: "none",
       width: "100%",
-      height: "40px",
+      height: "50px",
       fontSize: "1.4rem",
+      paddingLeft: "15px",
     },
   },
   editIcon: {

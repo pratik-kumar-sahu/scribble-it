@@ -1,6 +1,9 @@
 const styles = (theme) => ({
   listItem: {
     cursor: "pointer",
+    border: "1px solid #374151",
+    borderRadius: "8px",
+    marginBottom: ".5rem",
   },
   textSection: {
     maxWidth: "85%",
@@ -10,7 +13,7 @@ const styles = (theme) => ({
     right: "5px",
     top: "calc(50% - 15px)",
     "&:hover": {
-      color: "red",
+      color: "#DB2777",
     },
   },
 });

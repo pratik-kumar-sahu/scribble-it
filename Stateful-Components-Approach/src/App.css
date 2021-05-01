@@ -25,6 +25,10 @@ body {
   overflow: scroll;
 }
 
+/* @media only screen and (max-width: 600px) {
+  #sribble
+} */
+
 .app-container {
   height: 100%;
   box-sizing: border-box;
@@ -42,7 +46,9 @@ body {
   box-sizing: border-box;
   /* height: calc(100% - 42px); */
   height: 100%;
+  min-height: 150px;
   overflow: scroll;
+  border: 0 !important;
 }
 
 @media only screen and (max-width: 600px) {
@@ -53,7 +59,11 @@ body {
   }
 
   #scribble-container {
-    margin: 5% auto;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 1rem;
+    /* margin: 5% auto; */
   }
 
   .ql-container {

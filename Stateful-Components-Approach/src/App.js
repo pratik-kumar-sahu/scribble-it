@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { invokeFirestore, timestamp } from "./firebase";
 import Editor from "./components/Editor/Editor";
 import Sidebar from "./components/Sidebar/Sidebar";
+import { motion } from "framer-motion";
 import "./App.css";
 
 class App extends Component {
@@ -38,12 +39,18 @@ class App extends Component {
           newNote={this.newNote}
         ></Sidebar>
         {this.state.selectedNote ? (
-          <Editor
-            selectedNote={this.state.selectedNote}
-            selectedNoteIndex={this.state.selectedNoteIndex}
-            notes={this.state.notes}
-            noteUpdate={this.noteUpdate}
-          ></Editor>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1 }}
+          >
+            <Editor
+              selectedNote={this.state.selectedNote}
+              selectedNoteIndex={this.state.selectedNoteIndex}
+              notes={this.state.notes}
+              noteUpdate={this.noteUpdate}
+            ></Editor>
+          </motion.div>
         ) : null}
       </div>
     );

@@ -5,6 +5,7 @@ import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 import DeleteIcon from "@material-ui/icons/Delete";
 import { removeHTMLTags } from "../../helpers";
+import { motion } from "framer-motion";
 
 class SidebarItem extends Component {
   render() {
@@ -13,6 +14,7 @@ class SidebarItem extends Component {
     return (
       <div key={index}>
         <ListItem
+          style={{ position: "relative" }}
           className={classes.listItem}
           selected={selectedNoteIndex === index}
           alignItems="flex-start"
@@ -21,16 +23,28 @@ class SidebarItem extends Component {
             className={classes.textSection}
             onClick={() => this.selectNote(note, index)}
           >
-            <ListItemText
-              primary={note.title}
-              secondary={removeHTMLTags(note.body.substring(0, 30)) + "..."}
-            ></ListItemText>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              whileHover={{ scale: 0.95 }}
+            >
+              <ListItemText
+                primary={note.title}
+                secondary={removeHTMLTags(note.body.substring(0, 30)) + "..."}
+              ></ListItemText>
+            </motion.div>
           </div>
           {selectedNoteIndex === index ? (
-            <DeleteIcon
-              onClick={() => this.deleteNote(note)}
-              className={classes.deleteIcon}
-            ></DeleteIcon>
+            <motion.div
+              style={{ position: "absolute", top: "50%", left: "115%" }}
+              animate={{ x: -53 }}
+              transition={{ ease: "easeOut", duration: 1 }}
+            >
+              <DeleteIcon
+                onClick={() => this.deleteNote(note)}
+                className={classes.deleteIcon}
+              ></DeleteIcon>
+            </motion.div>
           ) : null}
         </ListItem>
       </div>
